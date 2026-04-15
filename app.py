@@ -3,8 +3,9 @@ import google.generativeai as genai
 import time
 
 # --- 1. 제미나이 API 설정 ---
-# 발급받은 제미나이 API 키를 아래에 입력해야 실제 AI가 작동합니다.
-API_KEY = "AIzaSyBGi5rUSI3RnEajjgzLlwiFCGpgDMSJSZQ" 
+# 기존의 "AIza..." 코드는 삭제하고 아래 한 줄만 남깁니다.
+API_KEY = st.secrets["GOOGLE_API_KEY"]
+
 genai.configure(api_key=API_KEY)
 model = genai.GenerativeModel('gemini-1.5-pro')
 
